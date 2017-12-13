@@ -11,10 +11,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        LeserviceService,
-        TheloggerService,
         EuroPipe
       ],
+      // providers: [LeserviceService, TheloggerService],
       declarations: [
         AppComponent
       ],

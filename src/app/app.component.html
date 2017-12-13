@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <!-- <h1>
     Welcome to {{ title }}!
   </h1>
 
@@ -8,15 +8,26 @@
 
   <!-- Attention préciser le type button car par defaut le type est submit -->
   <!-- Comportement CDK component developpement Kit -->
-  <button type="button" (click)="laFonctionClickBt();">OK Button</button>
+  <!-- <button type="button" (click)="laFonctionClickBt();">OK Button</button> -->
 
   <!-- Bouton de d'arret du timer -->
-  <button type="button" *ngIf="timerToken" (click)="stopTimer();">STOP Timer</button>
+  <!-- <button type="button" *ngIf="timerToken" (click)="stopTimer();">STOP Timer</button> -->
 
   <!-- Affichage d'une liste  -->
-  <ul>
+  <!-- <ul>
     <li *ngFor="let item of letableau">{{item}}</li>
-  </ul>
+  </ul>  -->
+
+  <a href="" routerLink="/">Home</a>
+  <a href="" routerLink="/list">Liste</a>
+  <a href="" routerLink="/view">Visualisation</a>
+  <a href="" routerLink="/create">Creation</a>
+
+  <button type="button" (click)="goHome();">Home</button>
+  <button type="button" (click)="goList();">Liste</button>
+  <button type="button" (click)="goView();">Visualisation</button>
+  <button type="button" (click)="goCreate();">Creation</button>
+
 
 </div>
 <router-outlet></router-outlet>

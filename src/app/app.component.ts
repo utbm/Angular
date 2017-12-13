@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LeserviceService } from './services/leservice.service'
 import { TheloggerService } from './services/thelogger.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit {
 
   // injection du service LeserviceService
   constructor(private _calculette: LeserviceService,
-              private _thelogger: TheloggerService) {
+    private _thelogger: TheloggerService,
+    private _router: Router) {
     // attention cycle de vie de la class et du component 
     this.populateLetabelau();
     this._thelogger.debug("creation de la class AppComponent");
@@ -49,5 +51,25 @@ export class AppComponent implements OnInit {
       clearTimeout(this.timerToken);
       this.timerToken = null;
     }
+  }
+
+  goHome(): void {
+    this._thelogger.debug("goHome !!!");
+    this._router.navigate(['']);
+  }
+
+  goList(): void {
+    this._thelogger.debug("goList !!!");
+    this._router.navigate(['list']);
+  }
+
+  goView(): void {
+    this._thelogger.debug("goView !!!");
+    this._router.navigate(['view']);
+  }
+
+  goCreate(): void {
+    this._thelogger.debug("goCreate !!!");
+    this._router.navigate(['create']);
   }
 }
