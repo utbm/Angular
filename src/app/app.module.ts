@@ -11,6 +11,7 @@ import { PageListComponent } from './lespages/page-list/page-list.component';
 import { PageCreationComponent } from './lespages/page-creation/page-creation.component';
 import { PageVisualisationComponent } from './lespages/page-visualisation/page-visualisation.component';
 import { PageHomeComponent } from './lespages/page-home/page-home.component'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageHomeComponent } from './lespages/page-home/page-home.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [LeserviceService, TheloggerService],
   bootstrap: [AppComponent]
