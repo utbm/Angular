@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   letableauX: Array<any> = [{ name: 'sdfsdf' }, { name: 'zerzerzsdf' }];
   letableau: String[];
   timerToken: any;
+  montant: number = -123.214151;
 
   // injection du service LeserviceService
   constructor(private _calculette: LeserviceService,

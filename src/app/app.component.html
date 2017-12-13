@@ -3,6 +3,9 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+
+  <p> Montant : {{montant | currency:'EUR':1.2-2 | euro}}</p>
+
   <!-- Attention préciser le type button car par defaut le type est submit -->
   <!-- Comportement CDK component developpement Kit -->
   <button type="button" (click)="laFonctionClickBt();">OK Button</button>
