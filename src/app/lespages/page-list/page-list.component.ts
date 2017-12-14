@@ -20,12 +20,12 @@ export class PageListComponent implements OnInit {
       this.tabUsers = tab;
     }, (err) => {
       console.log(err);
-      this.laboite.showDlg();
+      this.laboite.showDlg(err);
     });
   }
 
   querryShow() {
-    this.laboite.showDlg();
+    this.laboite.showDlg('info test');
   }
 
 }

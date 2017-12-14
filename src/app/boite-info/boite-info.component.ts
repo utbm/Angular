@@ -8,6 +8,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class BoiteInfoComponent implements OnInit {
   closeResult: string;
+  message: string = "";
 
   @ViewChild('content') innerTemplate;
 
@@ -17,7 +18,8 @@ export class BoiteInfoComponent implements OnInit {
     // throw new Error("Method not implemented.");
   }
 
-  showDlg() {
+  showDlg(messagesdd: string) {
+    this.message = messagesdd;
     this.modalService.open(this.innerTemplate).result.then(
       (result) => {
         console.log("OK");
