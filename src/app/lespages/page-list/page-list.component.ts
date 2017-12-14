@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommServiceService } from '../../services/comm-service.service';
 
 @Component({
   selector: 'app-page-list',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-list.component.css']
 })
 export class PageListComponent implements OnInit {
+  tabUsers: any[];
 
-  constructor() { }
+  constructor(private _commServiceService: CommServiceService) {
+  }
 
   ngOnInit() {
+    this._commServiceService.getUsers().subscribe((tab: any[]) => {
+      this.tabUsers = tab;
+    }, err => console.log(err));
   }
 
 }

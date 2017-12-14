@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -12,6 +13,9 @@ import { PageCreationComponent } from './lespages/page-creation/page-creation.co
 import { PageVisualisationComponent } from './lespages/page-visualisation/page-visualisation.component';
 import { PageHomeComponent } from './lespages/page-home/page-home.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommServiceService } from './services/comm-service.service';
+import { BoiteInfoComponent } from './boite-info/boite-info.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +24,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageListComponent,
     PageCreationComponent,
     PageVisualisationComponent,
-    PageHomeComponent
+    PageHomeComponent,
+    BoiteInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule
   ],
-  providers: [LeserviceService, TheloggerService],
+  providers: [LeserviceService, TheloggerService, CommServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

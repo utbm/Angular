@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center"> -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand">Navbar</a>
+    <a class="navbar-brand" routerLink="/home">Utilisateur</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#" routerLink="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/list">List</a>
+          <a class="nav-link" href="" routerLink="/list">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  href="#"routerLink="/view">View</a>
+          <a class="nav-link"  href="" routerLink="/view">View</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"routerLink="/create">View</a>
+            <a class="nav-link" href="" routerLink="/create">View</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -28,9 +28,9 @@
     </div>
   </nav>
 
-  <!-- <main role="main" class="container">
+  <main role="main" class="container">
     <div class="starter-template">
+      <router-outlet></router-outlet>
     </div>    
-  </main> -->
-  <router-outlet></router-outlet>
-</div>
+  </main>
+<!-- </div> -->
