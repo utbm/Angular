@@ -15,7 +15,7 @@ import { PageHomeComponent } from './lespages/page-home/page-home.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommServiceService } from './services/comm-service.service';
 import { BoiteInfoComponent } from './boite-info/boite-info.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,9 @@ import { BoiteInfoComponent } from './boite-info/boite-info.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    HttpModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [LeserviceService, TheloggerService, CommServiceService],
   bootstrap: [AppComponent]

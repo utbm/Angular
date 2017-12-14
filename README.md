@@ -28,13 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-
-
-
-
-
-
-
 https://angular-2-training-book.rangle.io/
 http://reactivex.io/
 https://jsonplaceholder.typicode.com/
+
+https://html5test.com/
