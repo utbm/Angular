@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BoiteLoginComponent } from '../../boite-login/boite-login.component';
 
 @Component({
   selector: 'app-page-home',
@@ -8,29 +8,12 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class PageHomeComponent implements OnInit {
 
-  userForm: FormGroup; //le formulaire
-  usernamectrl: FormControl; // gestion du nom
-  passwordctrl: FormControl; // gestion du password
+  @ViewChild('laboitelogin') laboitelogin: BoiteLoginComponent;
 
-  constructor(private _fb: FormBuilder) {
-    //creation du gestionnaire de nom
-    this.usernamectrl = _fb.control('', [Validators.required]);
-    this.passwordctrl = _fb.control('', [Validators.required]);
-
-    //creation du groupe
-    this.userForm = _fb.group({
-      username: this.usernamectrl,
-      password: this.passwordctrl
-    });
+  constructor() {
   }
-
+  
   ngOnInit() {
-
+    this.laboitelogin.showDlg();
   }
-
-  traitementForm() {
-    console.log("Name: " + this.userForm.value.username);
-    console.log("Password: " + this.userForm.value.password);
-  }
-
 }

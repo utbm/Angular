@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommServiceService } from './services/comm-service.service';
 import { BoiteInfoComponent } from './boite-info/boite-info.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BoiteLoginComponent } from './boite-login/boite-login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PageCreationComponent,
     PageVisualisationComponent,
     PageHomeComponent,
-    BoiteInfoComponent
+    BoiteInfoComponent,
+    BoiteLoginComponent
   ],
   imports: [
     BrowserModule,
