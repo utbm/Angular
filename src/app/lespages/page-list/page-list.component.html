@@ -1,7 +1,11 @@
+<div class="alert alert-danger">
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
 
-    <div class="alert alert-danger">
-        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-      </div>
 
+{{tabUsers | json}}
 
-  {{tabUsers | json}}
+<!-- Ajout du bouton pour ouvrire la boite -->
+<button type="button" (click)="querryShow();">Show Dialog</button>
+
+<app-boite-info #laboite></app-boite-info>

@@ -10,6 +10,6 @@ export class CommServiceService {
     constructor(private _http: Http) { }
 
     getUsers() {
-        return this._http.get("https://jsonplaceholder.typicode.com/users").map((res: Response) => res.json());
+        return this._http.get("https://jjsonplaceholder.typicode.com/users").map((res: Response) => res.json());
     }
 }

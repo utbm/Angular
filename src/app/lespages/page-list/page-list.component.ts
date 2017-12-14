@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommServiceService } from '../../services/comm-service.service';
+import { BoiteInfoComponent } from '../../boite-info/boite-info.component';
 
 @Component({
   selector: 'app-page-list',
@@ -9,13 +10,22 @@ import { CommServiceService } from '../../services/comm-service.service';
 export class PageListComponent implements OnInit {
   tabUsers: any[];
 
+  @ViewChild('laboite') laboite: BoiteInfoComponent;
+
   constructor(private _commServiceService: CommServiceService) {
   }
 
   ngOnInit() {
     this._commServiceService.getUsers().subscribe((tab: any[]) => {
       this.tabUsers = tab;
-    }, err => console.log(err));
+    }, (err) => {
+      console.log(err);
+      this.laboite.showDlg();
+    });
+  }
+
+  querryShow() {
+    this.laboite.showDlg();
   }
 
 }
